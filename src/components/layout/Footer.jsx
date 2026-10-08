@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext.jsx';
 
+const STORE_EMAIL = 'infoinfibeyond@gmail.com';
+
 export default function Footer() {
   const { toggleMode } = useTheme();
   return (
@@ -34,10 +36,10 @@ export default function Footer() {
         <div>
           <h4>Contact us</h4>
           <ul>
-            <li><a className="mail" href="mailto:infoinfibeyond@gmail.com">infoinfibeyond@gmail.com</a></li>
+            <li><a className="mail" href={`mailto:${STORE_EMAIL}`}>{STORE_EMAIL}</a></li>
           </ul>
         </div>
       </div>
-      </footer>
+    </footer>
   );
 }
