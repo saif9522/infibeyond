@@ -27,7 +27,6 @@ const RAW_PRODUCTS = [
  {id:"gm019",n:"STP Gas Treatment",sku:"10071153786094",price:4.13,stock:3,sub:"Automotive Care",art:"auto",c:"#E63946",brand:"STP",pack:"Bottle",d:"Removes water from fuel and cleans the fuel system to help prevent rough idling."},
  {id:"gm020",n:"STP Super Concentrated Fuel Injector Cleaner",sku:"10071153184029",price:4.10,stock:5,sub:"Automotive Care",art:"auto",c:"#212529",brand:"STP",pack:"Bottle",d:"Concentrated injector cleaner that restores spray pattern and throttle response."},
  {id:"gm022",n:"Socks Wow Sox 60 Count",sku:"",price:96.00,stock:3,sub:"Apparel & Accessories",art:"socks",c:"#7209B7",pack:"60-pair spinner display",d:"Assorted fun-print crew socks on a rotating counter tree. 60 pairs per display."},
- {id:"gm023",n:"5 Hour Energy Extra Strength",sku:"719410749122",price:15.00,compareAt:23.99,stock:null,sub:"Energy & Beverages",art:"shot",c:"#C1121F",brand:"5-hour Energy",pack:"Display box, flavors vary",d:"Extra-strength energy shots in a counter display. Choose flavor at checkout notes."},
  {id:"gm024",n:"Palm Battery",sku:"",price:11.00,compareAt:11.50,stock:null,sub:"Electronics & Charging",art:"battery",c:"#457B9D",pack:"Each, colors vary",d:"Compact palm-size rechargeable battery in assorted metallic colors. Age-restricted item, 21+ only.",age:true},
  {id:"gm025",n:"Wegacell Type C Lightning Charger",sku:"",price:3.00,stock:34,sub:"Electronics & Charging",art:"cable",c:"#6C757D",brand:"Wegacell",pack:"Each, blister pack",d:"USB-C to Lightning fast-charge and sync cable in retail-ready packaging."},
  {id:"gm026",n:"Wegacell USB Car Charger",sku:"",price:null,stock:4,sub:"Electronics & Charging",art:"carcharger",c:"#E63946",brand:"Wegacell",pack:"Case",d:"Dual-port USB car charger in assorted colors, boxed for resale."},
@@ -61,7 +60,6 @@ const RAW_PRODUCTS = [
 
 /* Product name -> photo file in /public/images */
 export const IMAGES = {
-  "5 Hour Energy Extra Strength": "5-hour-energy-extra-strength.webp",
   "Blazing Buddies Display": "blazing-buddies-display.webp",
   "Duracell": "duracell.webp",
   "Eyez Sport Sunglass": "eyez-sport-sunglass.webp",

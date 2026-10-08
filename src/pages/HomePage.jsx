@@ -1,6 +1,6 @@
 import { PRODUCTS, pickProducts } from '../data/products.js';
 import { shopUrl } from '../hooks/useShopFilters.js';
-import { discountPct, money } from '../utils/format.js';
+import { money } from '../utils/format.js';
 import HeroCarousel from '../components/home/HeroCarousel.jsx';
 import PromoTile from '../components/home/PromoTile.jsx';
 import Perks from '../components/home/Perks.jsx';
@@ -34,15 +34,18 @@ const TABS = {
 };
 
 export default function HomePage() {
-  const [energy] = pickProducts('5 Hour Energy Extra Strength');
+  const dispensers = pickProducts('Special Blue Mini Dispenser', 'Special Blue Tall Dispenser');
+  const fromPrice = Math.min(...dispensers.map(p => p.price));
+  const inStock = dispensers.reduce((n, p) => n + (p.stock || 0), 0);
   return (
     <div className="home">
       <div className="wrap">
         <div className="bento">
           <HeroCarousel slides={SLIDES} />
-          <PromoTile to={`/product/${energy.id}`} color="var(--h2)" pill="On sale" title="5-hour Energy Extra Strength"
-            big={`-${discountPct(energy)}%`} text={`Now ${money(energy.price)}, was ${money(energy.compareAt)}`}
-            linkText="Shop the deal" products={[energy]} />
+          <PromoTile to={shopUrl({ dept: 'Kitchen & Dispensers' })} color="var(--h2)" pill="Kitchen & dispensers"
+            title="Special Blue cream dispensers" big={`From $${Number.isInteger(fromPrice) ? fromPrice : fromPrice.toFixed(2)}`}
+            text={`Mini and tall aluminium whippers, ${inStock} in stock.`}
+            linkText="Shop dispensers" products={dispensers} />
           <PromoTile to={shopUrl({ dept: 'Electronics & Charging' })} color="var(--h3)" pill="Phone accessories"
             title="Wegacell chargers and cables" text={`Cables from ${money(3)}, plus LED countertop displays.`}
             linkText="Shop charging" products={pickProducts('Wegacell Type C Lightning Charger', 'Wegacell USB Car Charger', 'Wegacell USB Wall Charger')} />
