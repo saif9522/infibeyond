@@ -31,6 +31,12 @@ export default function Footer() {
             <li>Some items require age verification (21+)</li>
           </ul>
         </div>
+         <div>
+          <h4>Contact us</h4>
+          <p style={{ margin: '0 0 8px' }}>Orders, prices on request and wholesale questions:</p>
+          <a className="mail" href={`mailto:${STORE_EMAIL}`}><Icon name="mail" />{STORE_EMAIL}</a>
+        </div>
+      </div>
       </div>
     </footer>
   );
