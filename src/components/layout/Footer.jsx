@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <h4>infibeyond.com</h4>
           <p style={{ margin: 0, maxWidth: '46ch' }}>
-            A store dedicated to general merchandise: automotive care, torches, phone accessories, toys and novelties,
+            A store dedicated to general merchandise: automotive care, phone accessories, toys and novelties,
             household and personal care, and retail displays.
           </p>
           <button className="linkbtn theme-toggle" onClick={toggleMode}>Switch light / dark</button>

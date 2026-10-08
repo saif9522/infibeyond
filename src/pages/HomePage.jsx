@@ -13,8 +13,8 @@ import Newsletter from '../components/home/Newsletter.jsx';
 const auto = PRODUCTS.filter(p => p.sub === 'Automotive Care');
 
 const SLIDES = [
-  { pill: 'New season stock', title: 'Jet torches, ready for the counter', text: 'Refillable butane torches and 12-count displays, from $9.75.',
-    cta: 'Shop torches', dept: 'Torches', products: pickProducts('Turbo Curve Torch', 'AK47 Torch', 'Spark Cloud Torch 12CT') },
+  { pill: 'Ready to sell', title: 'Counter displays that sell themselves', text: 'Floor merchandisers and LED phone-accessory racks that turn spare space into sales.',
+    cta: 'Shop displays', dept: 'Displays & Fixtures', products: pickProducts('Blazing Buddies Display', 'Wegacell Display 9940', 'Wegacell Display 9936') },
   { pill: `${auto.length} automotive products`, title: 'Keep every engine running', text: 'STP fuel treatments, brake and steering fluids, motor oil and gas cans.',
     cta: 'Shop auto care', dept: 'Automotive Care', products: pickProducts('STP Octane Booster', 'STP Super Concentrated Fuel Cleaner', 'STP Gas Treatment') },
   { pill: 'Halloween edition', title: 'Squishies and spinners for spooky season', text: 'Pumpkins, sugar dumplings, big cheese and light-up spinners.',
@@ -22,14 +22,14 @@ const SLIDES = [
 ];
 
 const TABS = {
-  'New arrivals': pickProducts('Toy Light Spinner', 'Spark Pixels Torch 12CT', 'Spark Cloud Torch 12CT', 'Tyson Eye Drop',
+  'New arrivals': pickProducts('Toy Light Spinner', 'Toy Bead Orbit', 'Wegacell Display 9940', 'Tyson Eye Drop',
     'Toy Halloween Sugar Dumpling', 'Toy Big Butter', 'Wegacell Display 9936', 'Eyez Sport Sunglass'),
   'Deals & under $10': [
     ...PRODUCTS.filter(p => p.compareAt),
     ...PRODUCTS.filter(p => !p.compareAt && p.price != null && p.price <= 10).sort((a, b) => a.price - b.price),
   ].slice(0, 8),
   'Auto care': auto.slice(0, 8),
-  Torches: PRODUCTS.filter(p => p.sub === 'Torches'),
+  'Toys & novelties': PRODUCTS.filter(p => p.sub === 'Toys & Novelties').slice(0, 8),
   'Best stocked': PRODUCTS.filter(p => p.stock).sort((a, b) => b.stock - a.stock).slice(0, 8),
 };
 

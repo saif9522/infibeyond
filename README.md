@@ -49,7 +49,7 @@ src/
 ```
 
 ## Pages (URLs)
-`#/` home · `#/shop` all products · `#/shop?dept=Torches&q=stp&sort=price-asc` filtered views
+`#/` home · `#/shop` all products · `#/shop?dept=Automotive+Care&q=stp&sort=price-asc` filtered views
 · `#/product/gm010` product details · `#/cart` · `#/checkout` · `#/order-success`
 
 ## Editing products
@@ -57,7 +57,7 @@ src/
 - New photo: put `product-name.webp` in `public/images/`, then add
   `"Product Name": "product-name.webp"` to `IMAGES` in `src/data/products.js`.
 
-Only Toy Halloween Pumpkin and Bowl TTST010 still use a drawing instead of a photo.
+Toy Halloween Pumpkin, Bowl TTST010 and Pure Eye 6CT still use a drawing instead of a photo.
 
 ## Orders
 Checkout saves orders in the visitor's browser and shows a confirmation.

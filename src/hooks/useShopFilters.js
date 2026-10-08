@@ -2,7 +2,7 @@ import { useCallback, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 /**
- * Shop filters live in the URL (e.g. #/shop?dept=Torches&sort=price-asc),
+ * Shop filters live in the URL (e.g. #/shop?dept=Toys+%26+Novelties&sort=price-asc),
  * so filtered views can be bookmarked and shared.
  */
 export function useShopFilters() {
@@ -36,7 +36,7 @@ export function useShopFilters() {
   return { filters, update, clear };
 }
 
-/** Build a shop link, e.g. shopUrl({ dept: 'Torches' }) */
+/** Build a shop link, e.g. shopUrl({ dept: 'Automotive Care' }) */
 export function shopUrl({ dept, q } = {}) {
   const p = new URLSearchParams();
   if (q) p.set('q', q);
