@@ -453,3 +453,9 @@ header.site .more-btn.has-active{opacity:1;box-shadow:inset 0 -3px 0 var(--acc)}
 .more-menu{min-width:270px;width:max-content}
 .more-item span{white-space:nowrap}
 @media (max-width:520px){.more-menu{width:auto;min-width:min(280px,calc(100vw - 28px))}.more-item span{white-space:normal}}
+
+/* Footer: contact email column */
+.fgrid{grid-template-columns:2fr 1fr 1fr 1.3fr}
+@media (max-width:900px){.fgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.fgrid{grid-template-columns:1fr}}
+.mail{font-weight:600;overflow-wrap:anywhere}
